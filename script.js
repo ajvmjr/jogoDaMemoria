@@ -19,6 +19,8 @@ let imagensSalvas = ["draven.png", "jhin.png", "kaisa.png", "lucian.png", "sivir
 
 let imagens = imagensSalvas.concat(imagensSalvas);
 
+imagens = embaralhar(imagens);
+
 for(let i = 0; i < cartas.length; i++){
     cartas[i].style.backgroundImage = `url("images/${imagens[i]}")`;
 }
@@ -28,6 +30,8 @@ setTimeout(function(){
         carta.style.backgroundImage = 'url("images/logo.png")';
     }
 }, 3000);
+
+
 
 
 
