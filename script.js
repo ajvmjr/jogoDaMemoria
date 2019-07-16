@@ -28,6 +28,10 @@ for(let i = 0; i < cartas.length; i++){
 setTimeout(function(){
     for(let carta of cartas){
         carta.style.backgroundImage = 'url("images/logo.png")';
+        carta.onclick(){
+            carta.style.backgroundImage = `url("images/${imagens[Number(carta.id)]}")`;
+            carta.onclick = null;
+        }
     }
 }, 3000);
 
