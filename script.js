@@ -29,21 +29,21 @@ for(let i = 0; i < cartas.length; i++){
 
 setTimeout(function(){
     for(let carta of cartas){
-        carta.style.backgroundImage = 'url("images/logo.png")';
+        carta.style.backgroundImage = 'url("images/questionmark.png")';
         carta.onclick = function(){
-            carta.style.backgroundImage = `url("images/${imagens[Number(carta.id)]})`;
-            if(cartaVirada && cartaVirada.id !== carta.id){
+            carta.style.backgroundImage = `url("images/${imagens[Number(carta.id)]}")`;
+            if (cartaVirada && cartaVirada.id !== carta.id){
                 setTimeout(function(){
                     if(cartaVirada.style.backgroundImage === carta.style.backgroundImage){
                         cartaVirada.onclick = null;
                         carta.onclick = null;
                     }
                     else{
-                        carta.style.backgroundImage = 'url("images/logo.png")';
-                        cartaVirada.style.backgroundImage = 'url("images/logo.png")';
+                        carta.style.backgroundImage = 'url("images/questionmark.png")';
+                        cartaVirada.style.backgroundImage = 'url("images/questionmark.png")';
                     }
                     cartaVirada = null;
-                }, 1500);
+                }, 1500)
             }
             else{
                 cartaVirada = carta;
