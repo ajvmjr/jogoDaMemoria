@@ -24,14 +24,24 @@ main{
     align-items: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(auto, calc(15vw + 20px));
     height: calc(100vh - 110px);
     justify-items: center;
     width: 70vw;
 }
 
 .carta{
-    background-color: whitesmoke;
-    height: 100px;
-    width: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 15vw;
+    max-height: 110px;
+    max-width: 110px;
+    width: 15vw;
 }
+
+.carta:hover{
+    border: 5px dotted black;
+  }
